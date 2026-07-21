@@ -117,7 +117,7 @@ async function main() {
 
 //Server checking route
 app.get("/", (req, res) => {
-    res.send("server is working");
+    res.redirect("/home");
 })
 
 //index or home route
