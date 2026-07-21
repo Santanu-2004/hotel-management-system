@@ -1,0 +1,100 @@
+<% layout("/layouts/boilerplate") %>
+    <style>
+        ul li {
+            display: flex;
+        }
+
+        #filters{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .filter{
+            text-align: center;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        .filter:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    </style>
+
+    <body>
+        <!-- <form action="listings/new" method="get">
+        <button>add new property</button>
+    </form> -->
+        <div id="filters">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Trending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-wifi"></i></div>
+                <p>Free wifi</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Pools</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-campground"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain"></i></div>
+                <p>Mountain</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beach</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Iconic Cities</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-landmark"></i></div>
+                <p>Heritage</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-fort-awesome"></i></div>
+                <p>castle</p>
+            </div>
+        </div>
+        <!-- <h2>Find Your Choice</h2> -->
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+            <% for (let listing of allListings) { %>
+                <div class="card" style="width: 20rem;">
+                    <a href="/listings/<%= listing._id %>">
+                        <img src="<%= listing.image %>" class="card-img-top" alt="listed image">
+                        <div class="card-img-overlay"></div>
+                    </a>
+
+                    <div class="card-body">
+                        <p>
+                            <a href="listings/<%= listing._id %>">
+                                <b>
+                                    <%= listing.title %>
+                                </b>
+                            </a>
+                        </p>
+                        <p>
+                            <%= listing.country %>
+                        </p>
+                        <p>
+                            &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <% } %>
+        </div>
+
+    </body>

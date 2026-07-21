@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    .boxForm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #addform {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+</style>
+
+<body>
+    <div class="boxForm">
+        <h2>Edit Property Details</h2>
+        <form action="/listings/<%= oldListing._id %>?_method=PUT" method="post" id="addform">
+            <label>Property Name</label>
+            <input type="text" name="listing[title]" value="<%= oldListing.title %>">
+            <label>Description</label>
+            <input type="text" name="listing[description]" value="<%= oldListing.description %>">
+            <label>Image</label>
+            <input type="text" name="listing[image]" value="<%= oldListing.image %>">
+            <label>Price</label>
+            <input type="text" name="listing[price]" value="<%= oldListing.price %>">
+            <label>Country</label>
+            <input type="text" name="listing[country]" value="<%= oldListing.country %>">
+            <label>Location</label>
+            <input type="text" name="listing[address]" value="<%= oldListing.address %>">
+            <br>
+            <button style="background-color:rgb(223, 68, 68); color:white; height: 30px; border-radius: 16px; box-shadow :none;">Save Changes</button>
+        </form>
+    </div>
+</body>
+
+</html>

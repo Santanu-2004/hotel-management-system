@@ -1,0 +1,233 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+
+/* header / navbar stylings */
+
+.navbar{
+    height: 5rem;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* nav bar text color link */
+.nav-link{
+    color: black !important;
+}
+
+/* icon logoBox of nav-bar */
+.logobox{
+    width: 120px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* footer stylings */
+.f-main{
+    width: 100%;
+    height: 8rem;
+    background-color: #999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2rem;
+}
+
+.f-social-icons i{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+.f-social-icons i:hover{
+    font-size: 1.5rem;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+
+/* cards */
+.card{
+    border: none !important;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    height: 16rem !important;
+    object-fit: cover !important;
+}
+
+.card-body p a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400 !important;
+}
+
+/* edit and delete button styling */
+.actions{
+    display: flex;
+    flex-direction: row;
+}
+
+.actions button{
+    border-radius: 10px;
+    border: none;
+}
+
+/* card overley */
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.25;
+    background-color: white;
+}
+
+/* new data add */
+.form-control{
+    border: 0.05rem solid black !important;
+}
+
+.add-btn{
+    text-align:center !important;
+}
+
+/* show page css */
+.show-image{
+    border-radius: 1rem !important;
+    width: 100%;
+    height: 16rem !important;
+    object-fit: cover !important;
+    background-color:aquamarine ;
+}
+
+.show-image img{
+     border-radius: 1rem ;
+    width: 100%;
+    height: 100%;
+}
+
+/* review styling */
+.review-box{
+    border: 1px solid black !important;
+    border-radius: 1rem !important;
+    padding: 1rem 0 0 1rem !important;
+    margin-left: 2rem;
+}
+
+/* styles for search bar */
+/* Search Bar */
+
+.search-container{
+    width: 75%;
+    max-width: 800px;
+    height: 50px;
+
+    background: white;
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+
+    margin: 30px auto;
+    padding-left: 20px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+
+    transition: .3s;
+}
+
+.search-container:hover{
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
+}
+
+.search-item{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 22px;
+}
+
+.search-item label{
+    font-size: .9rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 0.1rem;
+    padding-top: 0.5rem;
+}
+
+.search-item input{
+    border: none;
+    outline: none;
+
+    font-size: 1rem;
+
+    color: #555;
+    background: transparent;
+    padding-bottom: 8px;
+}
+
+.search-item input::placeholder{
+    color: #777;
+}
+
+.divider{
+    width: 1px;
+    height: 40px;
+    background: #ddd;
+}
+
+.search-btn{
+    width: 50px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ff385c;
+
+    color: white;
+    font-size: 1.3rem;
+
+    margin-right: 12px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.search-btn:hover{
+    background: #e61e4d;
+    transform: scale(1.05);
+}

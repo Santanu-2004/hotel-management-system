@@ -1,0 +1,74 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust</title>
+</head>
+
+<body> -->
+    <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">
+                <div class="logobox">
+                    <img src="https://e7.pngegg.com/pngimages/948/458/png-clipart-landmarks-logo-earth-travel-illustration-world-travel-poster-fashion.png"
+                        class="logo" alt="airbnb-logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <!-- <a class="nav-link" href="/home">Home</a> -->
+                    <a class="nav-link" href="/home">All Listings</a>
+                    <!-- <a class="nav-link" href="/listings/new">Airbnb your home</a> -->
+                </div>
+                <!-- <div class="nav-search navbar-nav"> -->
+                    <!-- Bootstrap Icons -->
+                    <!-- <link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> -->
+
+                    <div class="search-container">
+
+                        <div class="search-item">
+                            <label>Where</label>
+                            <input type="text" placeholder="Search destinations">
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="search-item">
+                            <label>When</label>
+                            <input type="text" placeholder="Add dates">
+                        </div>
+
+                        <div class="divider"></div>
+
+                        <div class="search-item">
+                            <label>Who</label>
+                            <input type="text" placeholder="Add guests">
+                        </div>
+
+                        <button class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+
+                    </div>
+                <!-- </div> -->
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="/listings/new">Become a Host</a>
+                    <% if(!currUser) { %>
+                        <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+                        <a class="nav-link" href="/login"><b>Log in</b></a>
+                        <% } else { %>
+                            <a class="nav-link" href="/logout"><b>Log out</b></a>
+                            <% } %>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- </body>
+
+</html> -->

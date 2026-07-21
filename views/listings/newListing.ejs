@@ -1,0 +1,72 @@
+<% layout("/layouts/boilerplate") %>
+
+    <style>
+        .boxForm {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        #addform {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+
+    <body>
+        <div class="boxForm row">
+            <div class="col-8 offset-2">
+                <br>
+                <h2>Add New Property</h2>
+                <form action="/listings/new" method="post" id="addform" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <div class="">
+                    <label class="from-lable">Property Name</label>
+                    <input type="text" name="listing[title]" ]placeholder="Enter a Name of Property" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a Title</div>
+                    </div>
+                    <div class="">
+                    <label class="from-lable">Description</label>
+                    <input type="text" name="listing[description]" placeholder="Describe your Property" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a Description</div>
+                    </div>
+                    <!-- <div class="">
+                    <label class="from-lable">Image</label>
+                    <input type="text" name="listing[image]" placeholder="add an image url/link" class="form-control">
+                    </div> -->
+                    <div class="">
+                    <label class="from-lable">Upload Image</label>
+                    <input type="file" name="listing[image]" placeholder="add an image url/link" class="form-control">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="from-lable">Price</label>
+                            <input type="text" name="listing[price]" ]placeholder="e.g. 1000" class="form-control" required>
+                            <div class="invalid-feedback">Please enter a Price</div>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="from-lable">Country</label>
+                            <input type="text" name="listing[country]" placeholder="e.g. India" class="form-control" required>
+                            <div class="invalid-feedback">Please enter a country</div>
+                        </div>
+                    </div>
+                    <div class="">
+                    <label class="from-lable">Location</label>
+                    <input type="text" name="listing[address]" placeholder="e.g.Kolkata" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a Location</div>
+                    </div>
+                    <br>
+                    <button class="btn add-btn"
+                        style="background-color: #ff385c; color:#fff; width:10rem; height: 2.5rem; border-radius: 16px; box-shadow :none;">
+                        Add Property
+                    </button>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    </html>
