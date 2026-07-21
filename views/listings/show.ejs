@@ -103,10 +103,12 @@
                                     <%= review.comment %>
                                 </p>
                                 <!-- <p>rating : <%= review.rating %> star </p> -->
+                                <% if (currUser && review.author._id.equals(currUser._id)) { %>
                                 <form action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=delete"
                                     method="post">
                                     <button class="btn btn-sm btn-dark mb-2">Delete</button>
                                 </form>
+                                <% } %>
                             </div>
                             <% } %>
                     </div>
